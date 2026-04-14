@@ -16,7 +16,7 @@ const BannerSection = () => {
 
     return (
         // Main container padding for spacing aur centering
-        <section className="bg-white py-12 md:py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto min-h-125">
+        <section className=" py-12 md:py-20 px-4 sm:px-6 md:8 lg:px-8 max-w-7xl mx-auto min-h-125">
             <div className="flex flex-col items-center text-center">
                 
                 {/* 1. Text Content Block */}
