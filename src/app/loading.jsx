@@ -1,10 +1,12 @@
 import React from 'react';
+import { FadeLoader } from 'react-spinners';
+
 
 const loading = () => {
     return (
-        <div className='min-h-screen bg-amber-300'>
-            Loading.....
-        </div>
+       <div className='min-h-[70vh] flex justify-center items-center'>
+        <FadeLoader color='#244D3F' />
+       </div>
     );
 };
 
