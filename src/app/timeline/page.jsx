@@ -2,7 +2,7 @@
 
 import { useTimeline } from "@/Context/ProviderContext";
 import { useState } from "react";
-import { FiPhone, FiMessageSquare, FiVideo } from "react-icons/fi";
+import { FiPhone, FiMessageSquare, FiVideo, FiCoffee } from "react-icons/fi";
 
 const getIcon = (type) => {
   if (type === 'Call') return <FiPhone className="text-blue-500" size={20} />;
@@ -36,7 +36,7 @@ export default function TimelinePage() {
 
   return (
     <div className="max-w-7xl mx-auto p-4 md:p-8">
-      <h1 className="text-2xl font-bold text-[#1a4a38] mb-6">Timeline</h1>
+      <h1 className="text-3xl font-bold text-[#1a4a38] mb-6">Timeline</h1>
       
 <div className="flex justify-between items-center mb-6">
   {/* DaisyUI Premium Dropdown */}
@@ -48,7 +48,7 @@ export default function TimelinePage() {
     className="btn bg-white border border-gray-200 hover:border-[#1a4a38] hover:bg-white text-gray-700 font-normal rounded-lg px-6 flex items-center gap-2 min-w-40 justify-between"
   >
     {/* Current selected item  */}
-    {filterType === "All" ? "Filter timeline" : filterType}
+    {filterType === "All" ? "View All History" : filterType}
     
     {/* Dropdown Arrow Icon */}
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-gray-500">
@@ -65,37 +65,55 @@ export default function TimelinePage() {
     {/* All Interactions */}
     <li onClick={() => { setFilterType("All"); document.activeElement.blur(); }}>
       <a className={filterType === "All" ? "text-[#1a4a38] font-bold bg-green-50" : "text-gray-600 hover:bg-gray-50"}>
-        All Interactions
+        All History
       </a>
     </li>
     
     {/* Call */}
     <li onClick={() => { setFilterType("Call"); document.activeElement.blur(); }}>
       <a className={filterType === "Call" ? "text-[#1a4a38] font-bold bg-green-50" : "text-gray-600 hover:bg-gray-50"}>
-        Call
+        Call History
       </a>
     </li>
     
     {/* Text */}
     <li onClick={() => { setFilterType("Text"); document.activeElement.blur(); }}>
       <a className={filterType === "Text" ? "text-[#1a4a38] font-bold bg-green-50" : "text-gray-600 hover:bg-gray-50"}>
-        Text
+        Chat History
       </a>
     </li>
     
     {/* Video */}
     <li onClick={() => { setFilterType("Video"); document.activeElement.blur(); }}>
       <a className={filterType === "Video" ? "text-[#1a4a38] font-bold bg-green-50" : "text-gray-600 hover:bg-gray-50"}>
-        Video
+        Video History
       </a>
     </li>
   </ul>
 </div>
 </div>
       {interactions.length === 0 ? (
-        <div className="text-center p-10 bg-white rounded-xl shadow-sm border border-gray-100">
-          <p className="text-gray-500">No interactions yet.</p>
-        </div>
+        <>
+        {/* Premium Empty State with Animation */}
+<div className="flex flex-col items-center justify-center text-center p-16 bg-white rounded-2xl shadow-sm border-2 border-dashed border-gray-200 mt-8">
+  
+  {/* Icon with light bounce animation */}
+  <div className="bg-green-50 p-5 rounded-full mb-5">
+    <FiCoffee className="text-[#1a4a38] text-4xl animate-bounce" />
+  </div>
+
+  {/* Friendly Heading */}
+  <h3 className="text-xl font-bold text-gray-800 mb-2">
+    It`s quiet in here...
+  </h3>
+
+  {/* Encouraging Text */}
+  <p className="text-gray-500 max-w-sm mx-auto leading-relaxed">
+    Your timeline is waiting for some memories. Go to a friend`s profile and log a Call, Message, or Video check-in to get started!
+  </p>
+  
+</div>
+        </>
       ) : (
        
         <div className="flex flex-col gap-4">
