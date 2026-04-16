@@ -1,4 +1,3 @@
-// src/Components/Home/BannerSection.jsx
 
 import React from 'react';
 import { HiUserAdd } from 'react-icons/hi';
@@ -8,7 +7,7 @@ import StatCard from './Dashboard/StatCard';
 const BannerSection = () => {
     // Stats data array- 
     const statsData = [
-        { number: 10, label: "Total Friends" },
+        { number: 12, label: "Total Friends" },
         { number: 3, label: "On Track" },
         { number: 6, label: "Need Attention" },
         { number: 12, label: "Interactions This Month" },
@@ -51,3 +50,4 @@ const BannerSection = () => {
 };
 
 export default BannerSection;
+

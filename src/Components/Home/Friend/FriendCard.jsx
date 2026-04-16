@@ -19,7 +19,7 @@ export default function FriendCard({ friend }) {
   return (
    
     <Link href={`/${friend.id}`} className="block w-full">
-      <div className="flex flex-col items-center p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200 border border-gray-100 text-center cursor-pointer">
+<div className="flex flex-col items-center p-6 bg-white rounded-xl text-center cursor-pointer border border-gray-100 shadow-sm transition-all duration-300 ease-out hover:-translate-y-1.5 hover:shadow-lg hover:border-green-400 hover:ring-8 hover:ring-green-200">
         
         {/* Profile Image */}
         <div className="w-16 h-16 relative mb-3">
