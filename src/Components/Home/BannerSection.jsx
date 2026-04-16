@@ -8,7 +8,7 @@ const BannerSection = () => {
     // Stats data array- 
     const statsData = [
         { number: 12, label: "Total Friends" },
-        { number: 3, label: "On Track" },
+        { number: 4, label: "On Track" },
         { number: 6, label: "Need Attention" },
         { number: 12, label: "Interactions This Month" },
     ];

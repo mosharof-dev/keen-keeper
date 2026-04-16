@@ -95,15 +95,15 @@ export default async function FriendDetailsPage({ params }) {
           
           {/* Top 3 Stats Boxes */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center justify-center">
+            <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center justify-center hover:border-[#1a4a38] hover:bg-green-50/50 transition group">
               <span className="text-3xl font-bold text-[#1a4a38] mb-1">{friend.days_since_contact}</span>
               <span className="text-sm text-gray-500">Days Since Contact</span>
             </div>
-            <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center justify-center">
+            <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center justify-center hover:border-[#1a4a38] hover:bg-green-50/50 transition group">
               <span className="text-3xl font-bold text-[#1a4a38] mb-1">{friend.goal}</span>
               <span className="text-sm text-gray-500">Goal (Days)</span>
             </div>
-            <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center justify-center">
+            <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center justify-center hover:border-[#1a4a38] hover:bg-green-50/50 transition group">
               <span className="text-2xl font-bold text-[#1a4a38] mb-1">{formatDate(friend.next_due_date)}</span>
               <span className="text-sm text-gray-500">Next Due</span>
             </div>
@@ -120,24 +120,7 @@ export default async function FriendDetailsPage({ params }) {
             </button>
           </div>
 
-          {/* Quick Check-In Card (Later we will move this to a Client Component) */}
-          {/* <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
-            <h3 className="text-lg font-semibold text-[#1a4a38] mb-4">Quick Check-In</h3>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-              <button className="flex flex-col items-center justify-center gap-3 p-6 border border-gray-100 rounded-xl hover:border-[#1a4a38] hover:bg-green-50/50 transition group">
-                <LuPhoneCall  className="text-gray-600 group-hover:text-[#1a4a38]" size={28} />
-                <span className="font-medium text-gray-700">Call</span>
-              </button>
-              <button className="flex flex-col items-center justify-center gap-3 p-6 border border-gray-100 rounded-xl hover:border-[#1a4a38] hover:bg-green-50/50 transition group">
-                <FcSms className="text-gray-600 group-hover:text-[#1a4a38]" size={28} />
-                <span className="font-medium text-gray-700">Text</span>
-              </button>
-              <button className="flex flex-col items-center justify-center gap-3 p-6 border border-gray-100 rounded-xl hover:border-[#1a4a38] hover:bg-green-50/50 transition group">
-                <FiVideo className="text-gray-600 group-hover:text-[#1a4a38]" size={28} />
-                <span className="font-medium text-gray-700">Video</span>
-              </button>
-            </div>
-          </div> */}
+          
       <div >
          <QuickActions friendDetails={friend} />
       </div>

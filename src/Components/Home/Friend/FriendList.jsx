@@ -4,7 +4,7 @@ import FriendCard from "./FriendCard";
 
 const getFriendsData = async () => {
  
-  const res = await fetch('http://localhost:3000/friends.json', { cache: 'no-store' }); // Disable cache for dev testing
+  const res = await fetch('https://keen-keepe.vercel.app//friends.json', { cache: 'no-store' }); // Disable cache for dev testing
   if (!res.ok) {
     throw new Error('Failed to fetch friends data');
   }

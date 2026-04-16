@@ -2,7 +2,7 @@
 
 
 export async function getAllFriends() {
-  const res = await fetch('http://localhost:3000/friends.json', { cache: 'no-store' }); // dev mode  cache 
+  const res = await fetch('https://keen-keepe.vercel.app//friends.json', { cache: 'no-store' }); // dev mode  cache 
   if (!res.ok) {
     throw new Error('Failed to fetch friends data');
   }
