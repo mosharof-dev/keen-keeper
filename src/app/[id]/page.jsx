@@ -6,9 +6,6 @@ import { MdNotificationsPaused } from 'react-icons/md';
 import { HiArchiveBoxArrowDown } from 'react-icons/hi2';
 import { RiDeleteBin5Line } from 'react-icons/ri';
 import { BiEdit } from 'react-icons/bi';
-import { LuPhoneCall } from 'react-icons/lu';
-import { FcSms } from 'react-icons/fc';
-import { FiVideo } from 'react-icons/fi';
 import QuickActions from '@/Components/Home/QuickActions';
 
 
@@ -27,6 +24,11 @@ const formatDate = (dateString) => {
   if (!dateString) return 'N/A';
   const options = { year: 'numeric', month: 'short', day: 'numeric' };
   return new Date(dateString).toLocaleDateString('en-US', options);
+};
+
+export const metadata = {
+  title: "Keen Keeper - Friend Details",
+
 };
 
 export default async function FriendDetailsPage({ params }) {

@@ -18,7 +18,7 @@ const getStatusColor = (status) => {
 export default function FriendCard({ friend }) {
   return (
    
-    <Link href={`/friend/${friend.id}`} className="block w-full">
+    <Link href={`/${friend.id}`} className="block w-full">
       <div className="flex flex-col items-center p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200 border border-gray-100 text-center cursor-pointer">
         
         {/* Profile Image */}
